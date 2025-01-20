@@ -1,3 +1,7 @@
+INITIALLY MADE BY @tiborsaas AT https://github.com/tiborsaas/node-resume
+EDITED BY ME @JOIPOI, FOR MY OWN USE
+______________
+
 # Node resume
 This projects helps to generate a PDF resume based on a JSON file. By default two designs are supplied.
 
