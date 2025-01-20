@@ -1,6 +1,6 @@
 {
 	"format": "Letter",
-	"base": "file:///dev/github/node-cv/views/",
+	"base": "file:///dev/github/node-cv/views/basic",
 	"header": {
 		"height": "20mm",
 		"margin": "0mm",

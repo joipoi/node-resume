@@ -7,45 +7,53 @@
 </head>
 <body>
 	<header class="main">
-
-		<img src="{{meta.root}}/profile.jpg" alt="">
-
 		<h1>{{name}}</h1>
 		<h2>{{title}}</h2>
+	</header>
 
-		<div class="item">Born: {{born}}</div>
+	<header class="sub">
+		<div class="item">Född: {{born}}</div>
 		<div class="item">Email: {{email}}</div>
-		<div class="item">Residency: {{residence}}</div>
-		<div class="item">Skype ID: {{skype}}</div>
+		<div class="item">Plats: {{residence}}</div>
+	</header>
 
-		<article class="websites">
-			<p><a href="{{website}}">Personal website</a></p>
+	<aside>
+		<img src="{{meta.root}}/profile.jpg" alt="">
+		<article class="entry">
+			<h3>Hitta Mig</h3>
 			{% for portal in social_portals %}
 				<p><a href="{{portal.url}}">{{portal.title}}</a></p>
 			{% endfor %}
 		</article>
-	</header>
 
-	<div class="main">
 		<article class="entry">
-			<h3>Short biography</h3>
-			<p>{{short_bio}}</p>
+			<h3>IT-Kunskaper</h3>
+			{% for key, technology in technologies %}
+				<h4>{{key|capitalize}}</h4>
+				<p>{{technology}}</p>
+			{% endfor %}
 		</article>
 
 		<article class="entry">
-			<h3>Education</h3>
+			<h3>Språk</h3>
 			<ul>
-				{% for edu in education %}
-					<li>
-						{{edu.date}}<br>
-						{{edu.description}}
-					</li>
+				{% for lang in spoken_languages %}
+					<li>{{lang.language}} – {{lang.level}}</li>
 				{% endfor %}
 			</ul>
 		</article>
+	</aside>
+
+	<div class="main">
+		<article class="entry">
+			<h3>Profil</h3>
+		{% for bio_part in bio %}
+					<p>{{bio_part}}</p>
+				{% endfor %}
+		</article>
 
 		<article class="entry">
-			<h3>Work experience</h3>
+			<h3>Job Erfarenhet</h3>
 			<ul>
 				{% for job in job_history %}
 					<li>
@@ -58,7 +66,7 @@
 		</article>
 
 		<article class="entry">
-			<h3>List of my projects</h3>
+			<h3>Mina Projekt</h3>
 			<ul>
 				{% for project in projects %}
 					<li>
@@ -66,25 +74,20 @@
 						<br>
 						{{project.description}}
 						<br>
-						<a href="{{project.url}}">Visit project</a>
+						<a href="{{project.url}}">Besök Projektet</a>
 					</li>
 				{% endfor %}
 			</ul>
 		</article>
 
 		<article class="entry">
-			<h3>Technologies</h3>
-			{% for key, technology in technologies %}
-				<h4>{{key|capitalize}}</h4>
-				<p>{{technology}}</p>
-			{% endfor %}
-		</article>
-
-		<article class="entry">
-			<h3>Spoken languages</h3>
+			<h3>Utbildning</h3>
 			<ul>
-				{% for lang in spoken_languages %}
-					<li>{{lang.language}} – {{lang.level}}</li>
+				{% for edu in education %}
+					<li>
+						{{edu.date}}<br>
+						{{edu.description}}
+					</li>
 				{% endfor %}
 			</ul>
 		</article>

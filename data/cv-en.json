@@ -1,0 +1,98 @@
+{
+	"name": "Joel Ekne",
+	"title": "Full stack developer",
+	"born": "1999",
+	"email": "joel@ekne.com",
+	"website": "tbd",
+	"residence": "Malmö, Sweden",
+	"bio": ["I was born 1999 and live in Malmö, Sweden. I am very interested in IT. The thing I like the most is programming but, I also like other Areas within IT like: DevOps, SysAdmin, Security, etc.", 
+	"Right now I am doing a worktraining/internship at a company called Skäggbyrån. I want to have a job with nice people and learn more about IT.", 
+	"I have spent a lot of time teaching myself and doing projects, so I am confident I know more than my job experience shows." ],
+	"technologies": {
+		"frontend": "Javascript, HTML, CSS, React",
+		"backend": "Node.js, PHP, Java, C#, SQL",
+		"other": "Wordpress, AWS, Linux"
+	},
+
+	"social_portals": [
+		{"title": "Github", "url": "https://github.com/joipoi" },
+		{"title": "LinkedIn", "url": "https://www.linkedin.com/in/joel-ekne-95b847211/" }
+	],
+
+	"interests": [
+		""
+	],
+
+	"education": [
+		{
+			"date": "2015 - 2019",
+			"description": "Technology information & media | High School"
+		},
+		{
+			"date": "2019",
+			"description": "Web Technology 1, 2 & 3 | Collage Course | 45 HP"
+		},
+		{
+			"date": "2019",
+			"description": "Data Communication | Collage Course | 7,5 HP"
+		},
+		{
+			"date": "2019 - 2020",
+			"description": "Programming in C# 1 & 2  | Collage Course | 15 HP"
+		},
+		{
+			"date": "2020",
+			"description": "Database Systems - Undergraduate Level | Collage Course | 7,5 HP"
+		},
+		{
+			"date": "2020",
+			"description": "Introduction to Artificial Intelligence | Collage Course | 7,5 HP"
+		}
+		
+	],
+	"projects": [
+		{
+			"title": "Javascript Guide",
+			"description": "A text guide for someone to learn javascript that is new to the language. Written in swedish.",
+			"url": "https://github.com/joipoi/javascriptGuide"
+		},
+		{
+			"title": "Rosklide_ui_node",
+			"description": "A Web  UI written in node I made for my dad. It's an admin program for a music competition he runs.",
+			"url": "https://github.com/joipoi/roskilde_ui_node"
+		},
+		{
+			"title": "SkaggbyranCodeServer",
+			"description": "A server that lets users upload a front-end projects to save them or share with others. Written in node.",
+			"url": "https://github.com/joipoi/SkaggbyranCodeServer"
+		},
+		{
+			"title": "Puppeteer_jobSearch",
+			"description": "A web scraper that grabs data from https://arbetsformedlingen.se/platsbanken/ based on what the users wants to see. Written in node.",
+			"url": "https://github.com/joipoi/SkaggbyranCodeServer"
+		},
+		{
+			"title": "DB_Navigator",
+			"description": "A Wordpress plugin that lets you check on your Wordpress Database. Written in PHP.",
+			"url": "https://github.com/joipoi/DB_Navigator"
+		}
+	],
+
+	"job_history": [
+		{
+			"employer": "Skymill | Programmer - Intern",
+			"date": "2019",
+			"role": "Created a WebUI with HTML and CSS, also a RESTful API with Golang. The Database used was PostgreSQL. It was a small project I mostly worked on alone"
+		},
+		{
+			"employer": "Skäggbyrån | Programmer/Wordpress",
+			"date": "2024-2025",
+			"role": "Worked with wordpress to create websites and programmed in Javascript and PHP for Wordpress when required. Created my own Wordpress plugins and user their API."
+		}
+	],
+
+	"spoken_languages": [
+		{"language": "Swedish", "level": "native"},
+		{"language": "English", "level": "fluent"}
+	]
+}

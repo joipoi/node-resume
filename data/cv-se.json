@@ -1,0 +1,98 @@
+{
+	"name": "Joel Ekne",
+	"title": "Programmerare & mer",
+	"born": "1999",
+	"email": "joel@ekne.com",
+	"website": "tbd",
+	"residence": "Malmö",
+	"bio": ["Jag är född 1999 och bor i Malmö. Jag är väldigt intresserad av IT. Det jag gillar mest är programmering men, jag gillar också andra område inom IT som: DevOps, SysAdmin,Säkerhet, osv.", 
+	"Jag går just nu arbetsträning hos ett företag som heter Skäggbyrån för att kunna börja jobba på 100%. Jag vill ha ett jobb med trevliga människor där jag kan lära mig mer om IT.", 
+	"Jag har spenderat mycket tid med att lära mig själv och göra projekt, så jag har förtroende att jag kan mer än min joberfarenhet visar." ],
+	"technologies": {
+		"frontend": "Javascript, HTML, CSS, React",
+		"backend": "Node.js, PHP, Java, C#, SQL",
+		"annat": "Wordpress, AWS, Linux"
+	},
+
+	"social_portals": [
+		{"title": "Github", "url": "https://github.com/joipoi" },
+		{"title": "LinkedIn", "url": "https://www.linkedin.com/in/joel-ekne-95b847211/" }
+	],
+
+	"interests": [
+		""
+	],
+
+	"education": [
+		{
+			"date": "2015 - 2019",
+			"description": "Teknikprogrammet, informations- och medieteknik | Gymnasie"
+		},
+		{
+			"date": "2019",
+			"description": "Web Technology 1, 2 & 3 | 45 HP"
+		},
+		{
+			"date": "2019",
+			"description": "Data Communication | 7,5 HP"
+		},
+		{
+			"date": "2019 - 2020",
+			"description": "Programming in C# 1 & 2 | 15 HP"
+		},
+		{
+			"date": "2020",
+			"description": "Database Systems - Undergraduate Level | 7,5 HP"
+		},
+		{
+			"date": "2020",
+			"description": "Introduction to Artificial Intelligence | 7,5 HP"
+		}
+		
+	],
+	"projects": [
+		{
+			"title": "Javascript Guide",
+			"description": "En text guide för att lära någon javascript som är ny till språket, skriven på svenska.",
+			"url": "https://github.com/joipoi/javascriptGuide"
+		},
+		{
+			"title": "Rosklide_ui_node",
+			"description": "Ett Web UI skrivet i node jag skapde för min pappa som är adminprogram till en musiktävling han håller i.",
+			"url": "https://github.com/joipoi/roskilde_ui_node"
+		},
+		{
+			"title": "SkaggbyranCodeServer",
+			"description": "En server som låter användare lägga upp sina front-end projekt för att spara eller dela med andra, skrivit i node.",
+			"url": "https://github.com/joipoi/SkaggbyranCodeServer"
+		},
+		{
+			"title": "Puppeteer_jobSearch",
+			"description": "En web scraper som hämtar data från https://arbetsformedlingen.se/platsbanken/ baserat på vad användaren vill se, skrivit i node.",
+			"url": "https://github.com/joipoi/SkaggbyranCodeServer"
+		},
+		{
+			"title": "DB_Navigator",
+			"description": "Ett Wordpress plugin som låter dig kolla på din Wordpress Databas, skrivet i php.",
+			"url": "https://github.com/joipoi/DB_Navigator"
+		}
+	],
+
+	"job_history": [
+		{
+			"employer": "Skymill | Utvecklare - Praktik",
+			"date": "2019",
+			"role": "Skapade ett WebUI med HTML och CSS samt ett RESTful API med Golang. Databasen som användes var PostgreSQL. Det var ett litet projekt som jag jobbade mest med självständigt"
+		},
+		{
+			"employer": "Skäggbyrån | Utvecklare/Wordpress",
+			"date": "2024-2025",
+			"role": "Jobbade med wordpress för att skapa hemsidor och programmerade i Javascript och PHP för Wordpress när det behövdes. Skapade egna Wordpress plugins och använde deras API"
+		}
+	],
+
+	"spoken_languages": [
+		{"language": "Swedish", "level": "modersmål"},
+		{"language": "English", "level": "flytande"}
+	]
+}

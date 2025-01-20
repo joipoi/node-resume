@@ -8,7 +8,6 @@ body {
 	background: #fff;
 	font-size: 16px;
 	text-rendering: optimize-speed;
-	margin: 0rem 5rem;
 }
 
 @font-face {
@@ -79,12 +78,12 @@ h3 {
 	border-bottom: 1px solid #ccc;
 	display: block;
 	font-size: 1.5rem;
-	padding-bottom: 0.62rem;
 }
 
 h4 {
 	margin-bottom: 0.62rem;
 	margin-top: 1rem;
+	border-bottom: 1px dashed #333;
 	display: block;
 }
 
@@ -95,24 +94,17 @@ h4 {
 
 header.main {
 	color: #333;
+	padding: 0rem 0 2rem 0;
 	background: #fff;
+	background-size: cover;
+	text-align: center;
 }
-
-	header.main:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-
-	header img {
-		float: left;
-		width: 220px;
-		margin-right: 1rem;
-	}
-	
 	header h1 {
-		font-size: 2rem;
-		letter-spacing: 0.3rem;
+		font-size: 3rem;
+		padding: 2rem 2rem 1rem 2rem;
+		margin-bottom: 2.25rem;
+		border: 3px solid #333;
+		letter-spacing: 0.62rem;
 		display: inline-block;
 		text-transform: uppercase;
 		font-family: 'Spartan', serif;
@@ -124,17 +116,62 @@ header.main {
 		margin: 0rem 0;
 		font-family: 'Spartan', serif;		
 		font-size: 1.2rem;
-		margin-bottom: 0.25rem;
 	}
 
-
-
-article.websites {
-	margin-top: 0.62rem;
+header.sub {
+	background: #d9d9d9;
+	color: #333;
+	text-align: center;
+	padding: 1rem;
 }
 
-	article.websites a {
+	header.sub .item {
 		display: inline-block;
-		margin-right: 0.5rem;
+		margin-right: 2rem;
 	}
+
+	header.sub .item:last-child {
+		margin-right: 0;
+	}
+
+
+/************************
+ * CV BODY
+ ************************/
+
+article.main {
+	padding-top: 2rem;
+	margin-left: 33%;
+	width: 100%;
+	float: left;
+}
+
+aside {
+	position: absolute;
+	left: 0;
+	/*background: #e2e3eb;*/
+	border-right: 1px solid #e9e9e9;
+	width: 33%;
+	padding: 2rem;
+}
+
+	aside img {
+		width: 100%;
+		margin-top: 0.62rem;
+		margin-bottom: 1rem;
+	}
+
+	aside h3 {
+		border: none;
+		margin-bottom: 0.5rem;
+	}
+
+	aside p {
+		margin-bottom: 1rem;
+		display: block;
+	}
+
+div.main {
+	margin-left: 33%;
+	padding: 2rem 2rem 0 2rem;
 }

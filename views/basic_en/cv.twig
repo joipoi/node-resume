@@ -21,15 +21,9 @@
 		<img src="{{meta.root}}/profile.jpg" alt="">
 		<article class="entry">
 			<h3>On the web</h3>
-			<p><a href="{{website}}">Personal website</a></p>
 			{% for portal in social_portals %}
 				<p><a href="{{portal.url}}">{{portal.title}}</a></p>
 			{% endfor %}
-		</article>
-
-		<article class="entry">
-			<h3>Skype ID</h3>
-			<p>{{skype}}</p>
 		</article>
 
 		<article class="entry">
@@ -53,7 +47,9 @@
 	<div class="main">
 		<article class="entry">
 			<h3>Short biography</h3>
-			<p>{{short_bio}}</p>
+			{% for bio_part in bio %}
+					<p>{{bio_part}}</p>
+				{% endfor %}
 		</article>
 
 		<article class="entry">
@@ -94,11 +90,6 @@
 					</li>
 				{% endfor %}
 			</ul>
-		</article>
-
-		<article>
-			<h3>Fun fact</h3>
-			<p>This resume was generated with <a href="https://github.com/tiborsaas/node-resume">https://github.com/tiborsaas/node-resume</a></p>
 		</article>
 	</div>
 </body>
