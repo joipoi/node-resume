@@ -12,10 +12,14 @@ Currently I use it to generate both a Swedish and a English CV.
 - Clone or download the repo
 - Go to the project root and run 'npm install' to install dependenceis
 - run 'npm start' to generate the cv(for starters this would just generate my cv)
+
+
+# Modify for your own cv
 - if you want to generate your own cv you should change the data in the data folder(cv_en.json for english)
 - You could also change the twig files in the views folder to change the template
 - Keep in mind that the template file, data file and output file should all have the same name(not counting extension)
 - You could in theory add lots of templates and data for example in other languages
+
 
 # Dependenceis used
 - chalk(for console output)
