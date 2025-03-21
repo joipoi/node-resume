@@ -1,31 +1,27 @@
 INITIALLY MADE BY @tiborsaas AT https://github.com/tiborsaas/node-resume
-EDITED BY ME @JOIPOI, FOR MY OWN USE
+EDITED BY ME @joipoi
 ______________
+# Description
+This project lets you generate your own CV. It has a tempalte and data that gets filled in.
+You can edit the data to make your own custom CV.
 
-# Node resume
-This projects helps to generate a PDF resume based on a JSON file. By default two designs are supplied.
+Currently I use it to generate both a Swedish and a English CV.
 
-# [Check out my CV as an example](cv.pdf)
+# Install/Use
+- Make sure you have node and npm installed
+- Clone or download the repo
+- Go to the project root and run 'npm install' to install dependenceis
+- run 'npm start' to generate the cv(for starters this would just generate my cv)
+- if you want to generate your own cv you should change the data in the data folder(cv_en.json for english)
+- You could also change the twig files in the views folder to change the template
+- Keep in mind that the template file, data file and output file should all have the same name(not counting extension)
+- You could in theory add lots of templates and data for example in other languages
 
-## Usage
-Just edit a json, use the command line and you are ready to go. 
-### Step 1
-Install dependenceis with `npm install`.
-### Step 2
-Edit the contents of the `data/cv.json` or just use the nullified `cv-empty.json` as a starter.
-### Step 3
-Type `npm start` in command line. That will render the default template called "basic". You can render other templates by adding the template name that you can find the the `views` folder, like `npm start classic`.
+# Dependenceis used
+- chalk(for console output)
+- html-pdf(Converts html to a pdf)
+- twig(used for the template)
 
-DONE :)
-
-## Making changes to the template
-
-For convinence, I've added a dev server that can be launched with the `npm start dev` command. `npm start dev [templatename]` will launch the desired template. 
-
-### Important
-If you make changes to the template, the dev server needs to be re-launhed.
-
-## Used technologies
- * Twig template engine
- * html-pdf
- * Phantom JS
+# Problems
+- Acording to npm a lot of the packages here are outdated and may be unsafe. This does not really bother me because it works and I just
+use it for myself, but should be noted.

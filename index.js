@@ -5,58 +5,21 @@
  * can do whatever you want with this stuff. If we meet some day, and you think
  * this stuff is worth it, you can buy me a beer in return.
  * Tibor Szász
+ * 
+ * @joipoi edited this file later
  * ----------------------------------------------------------------------------
+ * 
  */
 const pdf = require('html-pdf');
 const twig = require('twig');
 const chalk = require('chalk');
 const path = require('path');
 const PDFoptions = require('./pdf-options.json');
-const express = require('express'), app = express();
-
-const LANGUAGES = {
-    EN: 'en',
-    SE: 'se'
-};
-
-const CURRENT_LANGUAGE = LANGUAGES.SE;
-
-const getLanguageData = (language) => {
-return require(`./data/cv-${language}.json`);
-};
-const template = "basic_" + CURRENT_LANGUAGE;
-const cvData = getLanguageData(CURRENT_LANGUAGE);
-
-// Configure Twig
-app.set("twig options", {
-    strict_variables: false,
-    cache: false,
-    auto_reload: true
-});
-
-// Helper functions
-const getFileProtocolPath = () => {
-    const segments = __dirname.split(path.sep);
-    segments[0] = 'file://';
-    return segments.join('/');
-};
-
-const getRoot = () => {
-    const root = getFileProtocolPath();
-    return `${root}/views/${template}`;
-};
-
-// Add metadata to CV data
-const meta = {
-    template,
-    root: getRoot()
-};
-cvData.meta = meta;
 
 // Promisify the PDF creation
-const createPDF = (html, options) => {
+const createPDF = (html, options, pdfName) => {
     return new Promise((resolve, reject) => {
-        pdf.create(html, options).toFile(`./${CURRENT_LANGUAGE}-cv.pdf`, (err, res) => {
+        pdf.create(html, options).toFile(`./${pdfName}.pdf`, (err, res) => {
             if (err) reject(err);
             else resolve(res);
         });
@@ -72,21 +35,41 @@ const renderTemplate = (templatePath, data) => {
         });
     });
 };
+const getFileProtocolPath = () => {
+    const segments = __dirname.split(path.sep);
+    segments[0] = 'file://';
+    return segments.join('/');
+};
+
+const getRoot = () => {
+    const root = getFileProtocolPath();
+    return `${root}/views/`;
+};
+
+const meta = {
+    root: getRoot()
+};
 
 // Main function
-async function generateCV() {
+//cvName must match between the data file, template file and output file(extension not included)
+async function generateCV(cvName) {
+    const cvData = require(`./data/${cvName}.json`);
+    cvData.meta = meta;
     try {
         // Render template
-        const html = await renderTemplate(`views/${template}/cv.twig`, cvData);
+        const html = await renderTemplate(`views/${cvName}.twig`, cvData);
         console.log(chalk.green('Looks good, just a second...'));
 
         // Generate PDF
-        await createPDF(html, PDFoptions);
-        console.log(chalk.cyan(`SUCCESS: Created the cv: ${CURRENT_LANGUAGE}-cv.pdf`));
+        await createPDF(html, PDFoptions, cvName);
+        console.log(chalk.cyan(`SUCCESS: Created the cv: ${cvName}.pdf`));
     } catch (error) {
         console.log(chalk.red('ERROR: ' + error));
     }
 }
+// Generates swedish cv
+generateCV("cv_se");
 
-// Execute
-generateCV();
+// Generates english cv
+generateCV("cv_en");
+
